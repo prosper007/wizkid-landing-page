@@ -1,0 +1,56 @@
+html{
+    font-size: 16px;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+.banner{
+    background-image: url(img/wizkid3.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    font-size: 1.2rem;
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+.brand{
+    font-size: 4em;
+    margin-right: auto;
+    flex-grow: 1;
+    font-family: 'Germania One', cursive;
+    color: #e5e5e5;
+}
+
+.navitem{
+    font-family: 'Germania One', cursive;
+    color: #e5e5e5;
+    font-size: 1em;
+}
+
+.navitem:hover{
+    color: #f47742;
+}
+
+.nav{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navmenu{
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin-left: 7em;
+}
