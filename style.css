@@ -23,6 +23,7 @@ a{
     background-repeat: no-repeat;
     overflow: auto;
     font-size: 1.2rem;
+    font-family: 'Germania One', cursive;
 }
 .container{
     width: 85%;
@@ -32,12 +33,10 @@ a{
     font-size: 4em;
     margin-right: auto;
     flex-grow: 1;
-    font-family: 'Germania One', cursive;
-    color: #e5e5e5;
+    color: #e5e5e5;   
 }
 
 .navitem{
-    font-family: 'Germania One', cursive;
     color: #e5e5e5;
     font-size: 1em;
 }
@@ -113,7 +112,7 @@ a{
     background-color: #516e3a; 
     border-radius: 6px;
     font-size: 1em;
-    color: white;
+    color: #ffffff;
     width: 40%;
     height: 2.5em;
     margin-top: 1em
@@ -200,4 +199,74 @@ a{
 
 .quad-item:hover .song{
     color: #bb1a43;
+}
+
+.tour{
+    background-image: url(img/tour2.jpg);
+    min-height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    overflow: auto;
+    font-size: 1.2rem; 
+}
+
+.tour-content{
+    width: 50%;
+    margin-left: 35px;
+    font-family: 'Germania One', cursive;
+    color: #e9dbdb;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tour-title{
+    font-size: 3em;
+    color: #fffdfd;
+}
+
+.event{
+    display: flex;
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
+}
+.event > div{
+    margin-right: 30px;
+}
+.date{
+    width: 25%;
+}
+.venue{
+    width: 55%;
+}
+.ticket{
+    width: 20%;
+}
+.venue, .ticket{
+    font-family: 'Raleway', sans-serif;
+}
+
+.venue div:nth-child(2){
+    font-size: 0.7em;
+    margin-top: 5px;
+}
+
+.ticket button{
+    display: inline-block;
+    height: 70%;
+    width: 100px;
+    background: none;
+    color: #e9dbdb;
+    border: 1px solid #e9dbdb;
+    font-size: 0.6em;
+}
+.ticket button:hover{
+    background-color: #492c2ccc;
+    color: #e9dbdb;
+}
+.more-dates{
+    font-size: 1.3em;
+    color: gold;
 }
