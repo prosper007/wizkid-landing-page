@@ -29,21 +29,6 @@ a{
     width: 85%;
     margin: auto;
 }
-.brand{
-    font-size: 4em;
-    margin-right: auto;
-    flex-grow: 1;
-    color: #e5e5e5;   
-}
-
-.navitem{
-    color: #e5e5e5;
-    font-size: 1em;
-}
-
-.navitem:hover{
-    color: #f47742;
-}
 
 .nav{
     margin-top: 30px;
@@ -60,12 +45,29 @@ a{
     margin-left: 7em;
 }
 
+.navitem{
+    color: #e5e5e5;
+    font-size: 1em;
+}
+
+.brand{
+    font-size: 4em;
+    margin-right: auto;
+    flex-grow: 1;
+    color: #e5e5e5;   
+}
+
+.navitem:hover{
+    color: #f47742;
+}
+
 .mobile{
     display: none;
     color: #e5e5e5;
     font-size: 1.3em;
 }
 
+/* Adapted from https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements */
 .mobile::before {
     display: inline-block;
     font-style: normal;
@@ -75,6 +77,14 @@ a{
     margin-right: 1.4em;  
 }
 
+.bars::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0c9";
+    animation: fadeinout 0.5s ease-in-out forwards;
+}
+
+/* Adapted from https://www.w3schools.com/css/css3_animations.asp */
 @keyframes fadeoutin {
     0%   	{opacity: 1;}
     25%	    {opacity: 0.5;}
@@ -89,13 +99,6 @@ a{
     100% 	{opacity: 1;}
 }
 
-.bars::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f0c9";
-    animation: fadeinout 0.5s ease-in-out forwards;
-}
-
 .mobile-menu{
     display: flex;
     height: 0px;
@@ -107,6 +110,8 @@ a{
     align-items: center;
     background-color: #af5c3993;
     transition: .5s ease;
+    position: absolute;
+    top: -6em;
 }
 
 #toggle-1{
@@ -150,6 +155,11 @@ a{
     align-items: center;
 }
 
+.slider-img{
+    max-height: 90%;
+    border-radius: 20px;
+}
+
 .slider-cta{
     display: flex;
     flex-direction: column;
@@ -176,10 +186,11 @@ a{
 .cta-button:hover{  
     background-color: #70a348;
 }
-.slider-img{
-    max-height: 90%;
-    border-radius: 20px;
+
+.button-holder{
+    margin-bottom: 10px;
 }
+
 .slider-button{
     display: inline-block;
     height: 0.7em;
@@ -191,9 +202,6 @@ a{
 
 .slider-button:active{
     background-color: #516e3a;
-}
-.button-holder{
-    margin-bottom: 10px;
 }
 
 .quad{
@@ -233,23 +241,23 @@ a{
     background-image: url(img/ojuelegba.png);
 }
 
+.song{
+    color: #f47742;
+    position: absolute;
+    z-index: 2;
+    order: 1;
+    transition: 0.8s ease;
+}
+
 /* Overlay effect adapted from https://www.w3schools.com/howto/howto_css_image_overlay.asp */
 .overlay {
     position: absolute;
     height: 100%;
     width: 100%;
     opacity: 0.5;
-    transition: .5s ease;
+    transition: 0.8s ease;
     background-color: #516e3a;
     z-index: 1;
-}
-
-.song{
-    color: #f47742;
-    position: absolute;
-    z-index: 2;
-    order: 1;
-    transition: .5s ease;
 }
 
 .quad-item:hover .overlay{
@@ -291,17 +299,21 @@ a{
     font-size: 1.3em;
     margin-bottom: 1.5em;
 }
-.event > div{
-    margin-right: 30px;
-}
+
 .date{
     width: 25%;
 }
+
 .venue{
     width: 55%;
 }
+
 .ticket{
     width: 20%;
+}
+
+.event > div{
+    margin-right: 30px;
 }
 .venue, .ticket{
     font-family: 'Raleway', sans-serif;
@@ -397,16 +409,19 @@ a{
         background-image: url(img/banner2.jpeg);
         color: #c0c0c0;
     }
-    .mobile{
-        display: inline;
+
+    .container{
+        width: 100%;
     }
 
     .navmenu{
         display: none;
     }
-    .container{
-        width: 100%;
+
+    .mobile{
+        display: inline;
     }
+
     .brand{
         margin-left: 15px; 
     }
@@ -415,19 +430,12 @@ a{
     input[type=checkbox]:checked ~ div {
         height: 300px;
         opacity: 1;
+        top: 6em;
     }
+
     input[type=checkbox]:checked ~ .bars::before{
         animation: fadeoutin 0.5s ease-in-out forwards;
         content: "\f00d";    
-    }
-
-    .quad{
-        display: inline-block;
-        min-height: 100%;
-    }
-    .quad-item{
-        width: 100%;
-        min-height: 80%;
     }
 
     .slider{
@@ -447,6 +455,15 @@ a{
         align-items: center;
     }
 
+    .quad{
+        display: inline-block;
+        min-height: 100%;
+    }
+    .quad-item{
+        width: 100%;
+        min-height: 80%;
+    }
+
     .tour{
         overflow-x: hidden;
     }
@@ -454,16 +471,6 @@ a{
         width: 100%;
         margin-left: 15px;
         align-items: center;
-    }
-    
-    .social{
-        flex-direction: column;
-    }
-    .social > div > p{
-        margin-bottom: 10px;
-    }
-    .legal{
-        margin-top: 15px;
     }
 
     .date{
@@ -479,11 +486,23 @@ a{
         height: 60px;
         width: 70px;
     }
+    
+    .social{
+        flex-direction: column;
+    }
+
+    .social > div > p{
+        margin-bottom: 10px;
+    }
 
     .join{
         display: flex;
         justify-content: space-around;
         width: 100%;
         flex-wrap: wrap;
+    }
+    
+    .legal{
+        margin-top: 15px;
     }
 }
