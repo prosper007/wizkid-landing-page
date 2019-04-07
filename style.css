@@ -68,20 +68,20 @@ a{
     opacity: 0;
 }
 
-.slide-wrapper{
+.slider{
     height: 20em;
     width: 100%; 
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
-.slider{
+.slides{
     /* Adapted from https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
     height: 100%;
     width: 100%;   
     display: flex;
-    overflow-x: hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
 }
 
@@ -91,6 +91,7 @@ a{
     height: 100%;
     margin: auto;
     flex-shrink: 0;
+    display: flex;
     justify-content: center;
     position: relative;
 }
@@ -136,10 +137,11 @@ a{
 }
 .slider-button{
     display: inline-block;
-    height: 10px;
-    width: 10px;
+    height: 0.7em;
+    width: 0.7em;
     border-radius: 5px;
     background-color: #bb1a43;
+    margin-right: 1em;
 }
 
 .slider-button:active{
@@ -326,7 +328,7 @@ a{
 .legal{
     display: flex;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 
 .legal a{
@@ -386,21 +388,12 @@ a{
         min-height: 80%;
     }
 
-    /* Adapted from https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
-    .button-holder{
-        display: none;
-    }
-
-    .slide-wrapper{
+    .slider{
         height: 70%;
     }
 
     .slide-content{
         flex-direction: column;
-    }
-
-    .slider{
-        touch-action: pan-x;
     }
 
     .slider-img{
@@ -420,9 +413,7 @@ a{
         margin-left: 15px;
         align-items: center;
     }
-    /* .venue, .ticket{
-        width: 75%;
-    } */
+    
     .social{
         flex-direction: column;
     }
