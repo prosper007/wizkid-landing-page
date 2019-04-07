@@ -119,7 +119,7 @@ a{
 }
 
 .slider{
-    height: 20em;
+    height: 50%;
     width: 100%; 
     display: flex;
     flex-direction: column;
@@ -207,7 +207,7 @@ a{
 .quad{
     display: flex;
     flex-direction: row;
-    height: 570px;
+    height: 80%;
     width: 100%;
 }
 
@@ -280,6 +280,7 @@ a{
 }
 
 .tour-content{
+    height: 100%;
     width: 50%;
     margin-left: 35px;
     font-family: 'Germania One', cursive;
@@ -436,10 +437,6 @@ a{
     input[type=checkbox]:checked ~ .bars::before{
         animation: fadeoutin 0.5s ease-in-out forwards;
         content: "\f00d";    
-    }
-
-    .slider{
-        height: 70%;
     }
 
     .slide-content{
