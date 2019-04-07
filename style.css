@@ -108,6 +108,7 @@ a{
     display: flex;
     flex-direction: column;
     margin-left: 30px;
+    margin-top: 10px;
 }
 
 .cta-info{
@@ -124,7 +125,7 @@ a{
     color: #ffffff;
     width: 100px;
     height: 2.5em;
-    margin-top: 1em
+    margin-top: 10px;
 }
 .cta-button:hover{  
     background-color: #70a348;
@@ -299,11 +300,18 @@ a{
     color: #f47742;
 }
 
-.social > div > input[type=text]{
+.input{
     border: none;
     border-bottom: 2px solid #f47742;
     background: none;
+    color: #f47742;
+    font-family: 'Germania One', cursive;
     font-size: 0.7em;
+}
+
+/* Adapted from https://stackoverflow.com/questions/1457849/how-to-remove-the-border-highlight-on-an-input-text-element */
+.input:focus{
+    outline-width: 0;
 }
 
 #ftrbtn{
@@ -338,32 +346,7 @@ a{
 
 
 @media only screen and (max-width: 640px) {
-    .quad{
-        display: inline-block;
-        min-height: 100%;
-    }
-    .quad-item{
-        width: 100%;
-        min-height: 80%;
-    }
-    .tour{
-        overflow-x: hidden;
-    }
-    .tour-content{
-        width: 100%;
-    }
-    .venue, .ticket{
-        width: 75%;
-    }
-    .social{
-        flex-direction: column;
-    }
-    .social > div > p{
-        margin-bottom: 10px;
-    }
-    .legal{
-        margin-top: 15px;
-    }
+    
     .mobile{
         display: inline;
     }
@@ -393,5 +376,77 @@ a{
         height: 300px;
         opacity: 1;
     }
-    
+
+    .quad{
+        display: inline-block;
+        min-height: 100%;
+    }
+    .quad-item{
+        width: 100%;
+        min-height: 80%;
+    }
+
+    /* Adapted from https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
+    .button-holder{
+        display: none;
+    }
+
+    .slide-wrapper{
+        height: 70%;
+    }
+
+    .slide-content{
+        flex-direction: column;
+    }
+
+    .slider-img{
+        max-height: 50%;
+    }
+
+    .slider-cta{
+        margin-left: 0px;
+        align-items: center;
+    }
+
+    .tour{
+        overflow-x: hidden;
+    }
+    .tour-content{
+        width: 100%;
+        margin-left: 15px;
+        align-items: center;
+    }
+    /* .venue, .ticket{
+        width: 75%;
+    } */
+    .social{
+        flex-direction: column;
+    }
+    .social > div > p{
+        margin-bottom: 10px;
+    }
+    .legal{
+        margin-top: 15px;
+    }
+
+    .date{
+        width: 20%;
+    }
+    .venue{
+        width: 50%;
+    }
+    .ticket{
+        width: 30%;
+    }
+    .button{
+        height: 60px;
+        width: 70px;
+    }
+
+    .join{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
 }
