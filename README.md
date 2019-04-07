@@ -8,4 +8,4 @@ https://drive.google.com/file/d/1V95nlnB8L85H275IXMxp7_9D0gusCzAl/view?usp=shari
 
 ## URL of original pages I was mimicking
 * https://flourbakery.com/
-* https://www.brunomars.com/t
+* https://www.brunomars.com/
